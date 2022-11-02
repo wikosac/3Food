@@ -51,4 +51,7 @@ dependencies {
     // firebase
     implementation platform('com.google.firebase:firebase-bom:28.4.1')
     implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
 }
