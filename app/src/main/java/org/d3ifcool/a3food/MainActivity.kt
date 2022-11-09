@@ -1,5 +1,6 @@
 package org.d3ifcool.a3food
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -44,9 +45,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateUI(user: FirebaseUser?) {
-        binding.login.text = if (user == null)
-            getString(R.string.login)
-        else
-            getString(R.string.logout)
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
+
+//        binding.login.text = if (user == null)
+//            getString(R.string.login)
+//        else
+//            getString(R.string.logout)
     }
 }
