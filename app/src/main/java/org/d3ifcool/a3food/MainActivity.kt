@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseUser
 import org.d3ifcool.a3food.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     private val contract = FirebaseAuthUIActivityResultContract()
     private val signInLauncher = registerForActivityResult(contract) { }
     private lateinit var binding: ActivityMainBinding
@@ -45,13 +46,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateUI(user: FirebaseUser?) {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-        finish()
+        val intent = Intent(this, DashboardActivity::class.java)
 
-//        binding.login.text = if (user == null)
-//            getString(R.string.login)
-//        else
-//            getString(R.string.logout)
+        if (user == null)
+            binding.login.text = getString(R.string.login)
+        else
+            startActivity(intent)
+            finish()
     }
 }

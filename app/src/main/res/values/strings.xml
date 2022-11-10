@@ -2,6 +2,10 @@
     <string name="app_name">3Food</string>
     <string name="login">Login</string>
     <string name="logout">Logout</string>
-    <string name="horizontalImage">Horizontal Image</string>
+    <string name="horizontalImage">HorizontalImage</string>
     <string name="maps">maps</string>
+    <string name="sekitar">Sekitar Kamu</string>
+    <string name="rekomendasi">Rekomendasi</string>
+    <string name="makanan">Makanan</string>
+    <string name="minuman">Minuman</string>
 </resources>
