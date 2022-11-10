@@ -11,12 +11,14 @@ import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import org.d3ifcool.a3food.databinding.ActivityMainBinding
+import org.d3ifcool.a3food.databinding.FragmentDashboardBinding
 
 class MainActivity : AppCompatActivity() {
 
     private val contract = FirebaseAuthUIActivityResultContract()
     private val signInLauncher = registerForActivityResult(contract) { }
     private lateinit var binding: ActivityMainBinding
+    private lateinit var bind: FragmentDashboardBinding
     private val viewModel: MainViewModel by lazy {
         ViewModelProvider(this).get(MainViewModel::class.java)
     }
@@ -32,9 +34,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun mulaiLogin() {
-        if (binding.login.text == getString(R.string.logout)) {
+        bind.profile.setOnClickListener() {
             AuthUI.getInstance().signOut(this)
-            return
         }
 
         val providers = arrayListOf(AuthUI.IdpConfig.GoogleBuilder().build())
