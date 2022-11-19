@@ -1,5 +1,6 @@
 package org.d3ifcool.a3food
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         signInLauncher.launch(intent)
     }
 
+    @SuppressLint("SuspiciousIndentation")
     private fun updateUI(user: FirebaseUser?) {
         val intent = Intent(this, DashboardActivity::class.java)
 

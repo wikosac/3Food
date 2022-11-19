@@ -24,31 +24,29 @@ class DashboardFragment : Fragment() {
     private lateinit var binding: FragmentDashboardBinding
     //private lateinit var viewModel: DashboardViewModel
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = FragmentDashboardBinding.inflate(layoutInflater)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentDashboardBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        binding = FragmentDashboardBinding.inflate(layoutInflater)
         //viewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
         // TODO: Use the ViewModel
 
         Log.d("dasbor", "Jumlah data: " + getData().size)
 
-
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         with(binding.recyclerView) {
             addItemDecoration(DividerItemDecoration(context, androidx.recyclerview.widget.RecyclerView.VERTICAL))
             adapter = DashboardAdapter(getData())
             setHasFixedSize(true)
         }
+
+
     }
 
     private fun getData(): List<Food> {
