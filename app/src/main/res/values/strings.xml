@@ -4,4 +4,10 @@
     <string name="logout">Logout</string>
     <string name="horizontalImage">Horizontal Image</string>
     <string name="maps">maps</string>
+    <string name="food">FRESH FOOD</string>
+    <string name="searchresto">SIMPLE SEARCH</string>
+    <string name="enjoy">ENJOY</string>
+    <string name="foodDes">Contoh.</string>
+    <string name="enjoyDes">Contoh.</string>
+    <string name="searchDes">Contoh.</string>
 </resources>
