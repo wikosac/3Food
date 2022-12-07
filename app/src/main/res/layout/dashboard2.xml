@@ -25,24 +25,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <xyz.sahildave.arclayout.ArcLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="160dp"
+<!--                <xyz.sahildave.arclayout.ArcLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="160dp"-->
 
-                    app:arc_cropCurve="cropConcave"
-                    app:arc_height="48dp"
-                    app:arc_position="bottom">
+<!--                    app:arc_cropCurve="cropConcave"-->
+<!--                    app:arc_height="48dp"-->
+<!--                    app:arc_position="bottom">-->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/blue"
-                        android:gravity="center"
-                        android:orientation="vertical">
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="@color/blue"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical">-->
 
-                    </LinearLayout>
+<!--                    </LinearLayout>-->
 
-                </xyz.sahildave.arclayout.ArcLayout>
+<!--                </xyz.sahildave.arclayout.ArcLayout>-->
 
                 <TextView
                     android:id="@+id/tvKoleksi"

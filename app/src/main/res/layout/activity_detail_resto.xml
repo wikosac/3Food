@@ -26,20 +26,20 @@
             android:background="@drawable/bg_overlay"
             android:orientation="horizontal" />
 
-        <com.github.ivbaranov.mfb.MaterialFavoriteButton
-            android:id="@+id/imgFavorite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            app:mfb_animate_favorite="true"
-            app:mfb_animate_unfavorite="true"
-            app:mfb_bounce_duration="0"
-            app:mfb_favorite_image="@drawable/ic_favorite"
-            app:mfb_not_favorite_image="@drawable/ic_unfavorite"
-            app:mfb_rotation_angle="360"
-            app:mfb_rotation_duration="400" />
+<!--        <com.github.ivbaranov.mfb.MaterialFavoriteButton-->
+<!--            android:id="@+id/imgFavorite"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            app:mfb_animate_favorite="true"-->
+<!--            app:mfb_animate_unfavorite="true"-->
+<!--            app:mfb_bounce_duration="0"-->
+<!--            app:mfb_favorite_image="@drawable/ic_favorite"-->
+<!--            app:mfb_not_favorite_image="@drawable/ic_unfavorite"-->
+<!--            app:mfb_rotation_angle="360"-->
+<!--            app:mfb_rotation_duration="400" />-->
 
     </FrameLayout>
 
