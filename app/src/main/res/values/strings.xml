@@ -2,12 +2,19 @@
     <string name="app_name">3Food</string>
     <string name="login">Login</string>
     <string name="logout">Logout</string>
-    <string name="horizontalImage">Horizontal Image</string>
+    <string name="horizontalImage">HorizontalImage</string>
     <string name="maps">maps</string>
     <string name="food">FRESH FOOD</string>
     <string name="searchresto">SIMPLE SEARCH</string>
-    <string name="enjoy">ENJOY</string>
-    <string name="foodDes">Contoh.</string>
-    <string name="enjoyDes">Contoh.</string>
-    <string name="searchDes">Contoh.</string>
+    <string name="easy">EASY</string>
+    <string name="foodDes">Makanan selalu enak dan fresh</string>
+    <string name="easyDes">Mudah digunakan semua kalangan</string>
+    <string name="searchDes">Tidak perlu bingung untuk mencari Tempat makan</string>
+=======
+    <string name="sekitar">Sekitar Kamu</string>
+    <string name="rekomendasi">Rekomendasi</string>
+    <string name="makanan">Makanan</string>
+    <string name="minuman">Minuman</string>
+
+>>>>>>> a429ab191ad9de66f7368c1aea017d4d94dfb568
 </resources>
