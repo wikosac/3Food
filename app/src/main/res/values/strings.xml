@@ -10,11 +10,11 @@
     <string name="foodDes">Makanan selalu enak dan fresh</string>
     <string name="easyDes">Mudah digunakan semua kalangan</string>
     <string name="searchDes">Tidak perlu bingung untuk mencari Tempat makan</string>
-=======
+    =======
     <string name="sekitar">Sekitar Kamu</string>
     <string name="rekomendasi">Rekomendasi</string>
     <string name="makanan">Makanan</string>
     <string name="minuman">Minuman</string>
 
->>>>>>> a429ab191ad9de66f7368c1aea017d4d94dfb568
+    >>>>>>> a429ab191ad9de66f7368c1aea017d4d94dfb568
 </resources>

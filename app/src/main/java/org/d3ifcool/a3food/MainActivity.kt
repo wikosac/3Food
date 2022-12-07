@@ -1,60 +1,37 @@
 package org.d3ifcool.a3food
 
-import android.annotation.SuppressLint
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.lifecycle.ViewModelProvider
-import com.firebase.ui.auth.AuthUI
-import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
-import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import org.d3ifcool.a3food.databinding.ActivityMainBinding
-import org.d3ifcool.a3food.databinding.FragmentDashboardBinding
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import org.d3ifcool.a3food.databinding.ActivityDashboardBinding
 
 class MainActivity : AppCompatActivity() {
-
-    private val contract = FirebaseAuthUIActivityResultContract()
-    private val signInLauncher = registerForActivityResult(contract) { }
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var bind: FragmentDashboardBinding
-    private val viewModel: MainViewModel by lazy {
-        ViewModelProvider(this).get(MainViewModel::class.java)
-    }
+    private lateinit var binding: ActivityDashboardBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.login.setOnClickListener { mulaiLogin() }
+//        if (savedInstanceState == null) {
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.container, DashboardFragment.newInstance())
+//                .commitNow()
+//        }
 
-        viewModel.authState.observe(this, { updateUI(it) })
-    }
+        val navView: BottomNavigationView = binding.navView
 
-    private fun mulaiLogin() {
-        bind.profile.setOnClickListener() {
-            AuthUI.getInstance().signOut(this)
-        }
-
-        val providers = arrayListOf(AuthUI.IdpConfig.GoogleBuilder().build())
-        val intent = AuthUI.getInstance()
-            .createSignInIntentBuilder()
-            .setAvailableProviders(providers)
-            .build()
-        signInLauncher.launch(intent)
-    }
-
-    @SuppressLint("SuspiciousIndentation")
-    private fun updateUI(user: FirebaseUser?) {
-        val intent = Intent(this, DashboardActivity::class.java)
-
-        if (user == null)
-            binding.login.text = getString(R.string.login)
-        else
-            startActivity(intent)
-            finish()
+        val navController = findNavController(R.id.nav_host_fragment_activity_dashboard)
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigation_home, R.id.navigation_search, R.id.navigation_setting
+            )
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
     }
 }
