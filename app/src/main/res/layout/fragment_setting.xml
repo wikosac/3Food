@@ -29,47 +29,62 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/eating"/>
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/auth"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="iwso"
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                android:textStyle="bold"/>
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/eating"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="iwso"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dsddddsss"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center"
+                    android:paddingEnd="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="dsddddsss"
-                android:textColor="#FFFFFF"
-                android:layout_gravity="center"
-                android:paddingEnd="20dp"/>
+                android:orientation="vertical"
+                android:visibility="gone">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="40dp"
-                android:paddingStart="30dp"
-                android:layout_gravity="center"
-                android:background="@drawable/round_back_secondary"
-                android:text="Edit Profile"
-                android:textAllCaps="false"
-                android:textColor="@color/primary"
-                android:paddingEnd="30dp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="40dp"
+                    android:paddingStart="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_back_secondary"
+                    android:text="Edit Profile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary"
+                    android:paddingEnd="30dp"/>
+            </LinearLayout>
 
             <LinearLayout
                 android:background="@drawable/round_back_white"
@@ -274,7 +289,7 @@
                             android:layout_width="40dp"
                             android:id="@+id/aboutUsIcon"
                             android:layout_height="40dp"
-                            android:src="@drawable/ic_baseline_people_24"
+                            android:src="@drawable/ic_baseline_exit_to_app_24"
                             android:background="@drawable/round_back_private_ccount"
                             android:padding="12dp"/>
 
@@ -283,7 +298,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
-                            android:text="Bahasa"
+                            android:text="Keluar"
                             android:textColor="@color/white"
                             android:textStyle="bold"
                             android:layout_toEndOf="@+id/aboutUsIcon"/>
