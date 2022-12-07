@@ -7,7 +7,6 @@
     android:background="@color/primary"
     tools:context=".ui.dashboard.SettingFragment">
 
-    
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -25,169 +24,163 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="18sp"/>
-
-        
     </RelativeLayout>
 
-        <ScrollView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/eating"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="iwso"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dsddddsss"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:paddingEnd="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:paddingStart="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_back_secondary"
+                android:text="Edit Profile"
+                android:textAllCaps="false"
+                android:textColor="@color/primary"
+                android:paddingEnd="30dp"/>
+
             <LinearLayout
+                android:background="@drawable/round_back_white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/eating"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:text="Dwiko Indrawansyah"
-                    android:textColor="@color/white"
-                    android:textSize="22sp"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="dsddddsss"
-                    android:textColor="#FFFFFF"
-                    android:layout_gravity="center"
-                    android:paddingEnd="20dp"/>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="40dp"
-                    android:paddingStart="30dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/round_back_secondary"
-                    android:text="Edit Profile"
-                    android:textAllCaps="false"
-                    android:textColor="@color/primary"
-                    android:paddingEnd="30dp"/>
-
-
-                <LinearLayout
-                    android:background="@drawable/round_back_white"
+                <!-- Dark Mode -->
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="40dp"
-                    android:orientation="vertical"
-                    android:padding="15dp">
+                    android:layout_height="wrap_content">
 
-                    <!-- Dark Mode -->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:id="@+id/nightModeIcon"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_baseline_nights_icon"
+                        android:background="@drawable/round_back_night_mode"
+                        android:padding="12dp"/>
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:id="@+id/nightModeIcon"
-                            android:layout_height="40dp"
-                            android:src="@drawable/ic_baseline_nights_icon"
-                            android:background="@drawable/round_back_night_mode"
-                            android:padding="12dp"/>
+                    <TextView
+                        android:layout_marginStart="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Mode Malam"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/nightModeIcon"/>
 
-                        <TextView
-                            android:layout_marginStart="15dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:text="Mode Malam"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:layout_toEndOf="@+id/nightModeIcon"/>
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:switchMinWidth="50dp"
+                        android:theme="@style/nightModeSwitch"/>
+                </RelativeLayout>
 
-                        <androidx.appcompat.widget.SwitchCompat
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:switchMinWidth="50dp"
-                            android:theme="@style/nightModeSwitch"/>
-                    </RelativeLayout>
+                <!-- Notification -->
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                    <!-- Notification -->
-                    <RelativeLayout
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:id="@+id/notificationIcon"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_baseline_notifications_24"
+                        android:background="@drawable/round_back_notification"
+                        android:padding="12dp"/>
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:id="@+id/notificationIcon"
-                            android:layout_height="40dp"
-                            android:src="@drawable/ic_baseline_notifications_24"
-                            android:background="@drawable/round_back_notification"
-                            android:padding="12dp"/>
+                    <TextView
+                        android:layout_marginStart="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Notifikasi"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/notificationIcon"/>
 
-                        <TextView
-                            android:layout_marginStart="15dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:text="Notifikasi"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:layout_toEndOf="@+id/notificationIcon"/>
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:switchMinWidth="50dp"
+                        android:theme="@style/notificationSwitch"/>
+                </RelativeLayout>
 
-                        <androidx.appcompat.widget.SwitchCompat
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:switchMinWidth="50dp"
-                            android:theme="@style/notificationSwitch"/>
-                    </RelativeLayout>
+                <!-- Private -->
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                    <!-- Private -->
-                    <RelativeLayout
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:id="@+id/privateAcountIcon"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_baseline_privacy_tip_24"
+                        android:background="@drawable/round_back_private_ccount"
+                        android:padding="12dp"/>
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:id="@+id/privateAcountIcon"
-                            android:layout_height="40dp"
-                            android:src="@drawable/ic_baseline_privacy_tip_24"
-                            android:background="@drawable/round_back_private_ccount"
-                            android:padding="12dp"/>
+                    <TextView
+                        android:layout_marginStart="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Akun Privat"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/privateAcountIcon"/>
 
-                        <TextView
-                            android:layout_marginStart="15dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:text="Akun Privat"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:layout_toEndOf="@+id/privateAcountIcon"/>
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:switchMinWidth="50dp"
+                        android:theme="@style/privateAccountSwitch"/>
+                </RelativeLayout>
+            </LinearLayout>
 
-                        <androidx.appcompat.widget.SwitchCompat
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:switchMinWidth="50dp"
-                            android:theme="@style/privateAccountSwitch"/>
-                    </RelativeLayout>
-
-
-
-                </LinearLayout>
-
-                <LinearLayout
+            <LinearLayout
                 android:background="@drawable/round_back_white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -219,7 +212,6 @@
                         android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/securityIcon"/>
-
                 </RelativeLayout>
 
                 <!-- text -->
@@ -245,7 +237,6 @@
                         android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/textIcon"/>
-
                 </RelativeLayout>
 
                 <!-- Langue -->
@@ -271,7 +262,6 @@
                         android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/languagesIcon"/>
-
                 </RelativeLayout>
 
                 <!-- Langue -->
@@ -297,19 +287,8 @@
                             android:textColor="@color/white"
                             android:textStyle="bold"
                             android:layout_toEndOf="@+id/aboutUsIcon"/>
-
-                    </RelativeLayout>
-
-
+                </RelativeLayout>
             </LinearLayout>
-
-
-
-
-
-            </LinearLayout>
-        </ScrollView>
-        
-
-
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
