@@ -2,11 +2,13 @@ package org.d3ifcool.a3food
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import org.d3ifcool.a3food.data.FoodDb
 import org.d3ifcool.a3food.databinding.ActivityDashboardBinding
 
 class MainActivity : AppCompatActivity() {
@@ -33,5 +35,11 @@ class MainActivity : AppCompatActivity() {
         )
 //        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+
+    private val viewModel: MainViewModel by lazy {
+        val dataSource = FoodDb.getInstance().dao
+        val factory = MainViewModelFactory(dataSource)
+        ViewModelProvider(this, factory).get(MainViewModel::class.java)
     }
 }

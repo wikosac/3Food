@@ -17,9 +17,7 @@ class LoginActivity : AppCompatActivity() {
     private val signInLauncher = registerForActivityResult(contract) { }
     private lateinit var binding: ActivityMainBinding
     private lateinit var bind: FragmentDashboardBinding
-    private val viewModel: MainViewModel by lazy {
-        ViewModelProvider(this).get(MainViewModel::class.java)
-    }
+    private val authState = FirebaseUserLiveData()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
 
         binding.login.setOnClickListener { mulaiLogin() }
 
-        viewModel.authState.observe(this, { updateUI(it) })
+        authState.observe(this, { updateUI(it) })
     }
 
     private fun mulaiLogin() {
