@@ -36,7 +36,7 @@ class DashboardFragment : Fragment() {
 
         with(binding.recyclerView) {
             addItemDecoration(DividerItemDecoration(context, androidx.recyclerview.widget.RecyclerView.VERTICAL))
-            //adapter = MainAdapter(getData())
+            adapter = DashboardAdapter(getData())
             setHasFixedSize(true)
         }
     }

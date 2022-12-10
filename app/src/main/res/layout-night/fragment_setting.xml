@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/teal_200"
+    android:background="@color/primary"
     tools:context=".ui.dashboard.SettingFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -281,27 +281,27 @@
 
                 <!-- Langue -->
                 <RelativeLayout
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:id="@+id/aboutUsIcon"
-                            android:layout_height="40dp"
-                            android:src="@drawable/ic_baseline_exit_to_app_24"
-                            android:background="@drawable/round_back_private_ccount"
-                            android:padding="12dp"/>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:id="@+id/aboutUsIcon"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_baseline_exit_to_app_24"
+                        android:background="@drawable/round_back_private_ccount"
+                        android:padding="12dp"/>
 
-                        <TextView
-                            android:layout_marginStart="15dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:text="Keluar"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:layout_toEndOf="@+id/aboutUsIcon"/>
+                    <TextView
+                        android:layout_marginStart="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Keluar"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/aboutUsIcon"/>
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
