@@ -12,12 +12,12 @@
         tools:layout="@layout/fragment_dashboard"/>
     <fragment
         android:id="@+id/navigation_search"
-        android:name="org.d3ifcool.a3food.ui.dashboard.SearchFragment"
+        android:name="org.d3ifcool.a3food.ui.search.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/fragment_search"/>
+        tools:layout="@layout/activity_search"/>
     <fragment
         android:id="@+id/navigation_setting"
-        android:name="org.d3ifcool.a3food.ui.dashboard.SettingFragment"
+        android:name="org.d3ifcool.a3food.ui.setting.SettingFragment"
         android:label="SettingFragment"
         tools:layout="@layout/fragment_setting"/>
 </navigation>

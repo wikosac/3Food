@@ -1,4 +1,4 @@
-package org.d3ifcool.a3food.ui.dashboard
+package org.d3ifcool.a3food.ui.setting
 
 import androidx.lifecycle.ViewModel
 

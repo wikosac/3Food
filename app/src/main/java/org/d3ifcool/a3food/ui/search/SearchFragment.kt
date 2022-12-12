@@ -1,4 +1,4 @@
-package org.d3ifcool.a3food.ui.dashboard
+package org.d3ifcool.a3food.ui.search
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -20,7 +20,7 @@ class SearchFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_search, container, false)
+        return inflater.inflate(R.layout.activity_search, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

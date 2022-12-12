@@ -1,4 +1,4 @@
-package org.d3ifcool.a3food
+package org.d3ifcool.a3food.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,6 +11,7 @@ import org.d3ifcool.a3food.databinding.FoodListBinding
 class MainAdapter(
     private val handler: ClickHandler
 ) : ListAdapter<Food, MainAdapter.ViewHolder>(DIFF_CALLBACK) {
+
     companion object {
         private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Food>() {
             override fun areItemsTheSame(
@@ -25,7 +26,9 @@ class MainAdapter(
             }
         }
     }
+
     private val selectionIds = ArrayList<String>()
+
     fun toggleSelection(pos: Int) {
         val id = getItem(pos).id
         if (selectionIds.contains(id))
@@ -34,9 +37,11 @@ class MainAdapter(
             selectionIds.add(id)
         notifyDataSetChanged()
     }
+
     fun getSelection(): List<String> {
         return selectionIds
     }
+
     fun resetSelection() {
         selectionIds.clear()
         notifyDataSetChanged()
