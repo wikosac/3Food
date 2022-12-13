@@ -48,23 +48,14 @@
                     android:layout_marginTop="10dp"
                     android:src="@drawable/eating"/>
 
-                <TextView
+                <Button
+                    android:id="@+id/editBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:text="iwso"
-                    android:textColor="@color/white"
-                    android:textSize="22sp"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="dsddddsss"
-                    android:textColor="#FFFFFF"
-                    android:layout_gravity="center"
-                    android:paddingEnd="20dp"/>
+                    android:text="Ubah"
+                    android:textColor="@color/black"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
             </LinearLayout>
 
             <LinearLayout
@@ -293,7 +284,7 @@
                         android:background="@drawable/round_back_private_ccount"
                         android:padding="12dp"/>
 
-                    <TextView
+                    <Button
                         android:id="@+id/login"
                         android:layout_marginStart="15dp"
                         android:layout_width="wrap_content"
@@ -301,8 +292,8 @@
                         android:layout_centerVertical="true"
                         android:text="@string/login"
                         android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/aboutUsIcon"/>
+                        android:layout_toEndOf="@+id/aboutUsIcon"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"/>
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>

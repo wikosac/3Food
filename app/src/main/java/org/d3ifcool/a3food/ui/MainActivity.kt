@@ -20,7 +20,7 @@ import org.d3ifcool.a3food.databinding.FragmentSettingBinding
 class MainActivity : AppCompatActivity() {
 
     private val contract = FirebaseAuthUIActivityResultContract()
-    private val signInLauncher = registerForActivityResult(contract) { this.onSignInResult(it) }
+    private val signInLauncher = registerForActivityResult(contract) {  }
     private val viewModel: MainViewModel by lazy {
         val dataSource = FoodDb.getInstance().dao
         val factory = MainViewModelFactory(dataSource)
@@ -35,13 +35,17 @@ class MainActivity : AppCompatActivity() {
         bind = FragmentSettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        bind.login!!.setOnClickListener { mulaiLogin() }
+        bind.login?.setOnClickListener { mulaiLogin() }
         viewModel.authState.observe(this, { updateUI(it) })
 
-//        bottom navbar
+        // bottom navbar
         val navView: BottomNavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_activity_dashboard)
+        val navController = findNavController(R.id.nav_host_fragment_activity_main)
         navView.setupWithNavController(navController)
+
+        fun navigateToMaps() {
+            navController.navigate(R.id.action_navigation_search_to_mapsFragment)
+        }
 
 //        if (savedInstanceState == null) {
 //            supportFragmentManager.beginTransaction()
@@ -69,15 +73,5 @@ class MainActivity : AppCompatActivity() {
             .setAvailableProviders(providers)
             .build()
         signInLauncher.launch(intent)
-    }
-
-    private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
-        val response = result.idpResponse
-        if (result.resultCode == RESULT_OK) {
-            val nama = FirebaseAuth.getInstance().currentUser?.displayName
-            Log.i("LOGIN", "$nama berhasil login")
-        } else {
-            Log.i("LOGIN", "Login gagal: ${response?.error?.errorCode}")
-        }
     }
 }

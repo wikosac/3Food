@@ -18,12 +18,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/searchTitle2"
+        android:id="@+id/mapsTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="424dp"
-        android:text="TextView"
+        android:text="Peta"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -48,22 +48,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/eating_1" />
 
-<!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:layout_width="409dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/divider"-->
-<!--        app:layout_constraintStart_toStartOf="@id/searchTitle"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/divider"/>-->
-
-    <com.google.android.material.textfield.TextInputEditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchView"
-        android:layout_width="348dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/searchTitle"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/app_name"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="331dp"
@@ -78,8 +75,8 @@
         android:layout_height="195dp"
         android:layout_marginTop="40dp"
         android:contentDescription="@string/maps"
-        app:layout_constraintStart_toStartOf="@+id/searchTitle2"
-        app:layout_constraintTop_toBottomOf="@+id/searchTitle2" />
+        app:layout_constraintStart_toStartOf="@+id/mapsTxt"
+        app:layout_constraintTop_toBottomOf="@+id/mapsTxt" />
 
 <!--    <com.google.android.material.textfield.TextInputLayout-->
 <!--        android:layout_width="409dp"-->

@@ -14,10 +14,28 @@
         android:id="@+id/navigation_search"
         android:name="org.d3ifcool.a3food.ui.search.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/activity_search"/>
+        tools:layout="@layout/activity_search">
+        <action
+            android:id="@+id/action_navigation_search_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_setting"
         android:name="org.d3ifcool.a3food.ui.setting.SettingFragment"
         android:label="SettingFragment"
-        tools:layout="@layout/fragment_setting"/>
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_navigation_setting_to_profileEditFragment"
+            app:destination="@id/profileEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="org.d3ifcool.a3food.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="org.d3ifcool.a3food.ProfileEditFragment"
+        android:label="fragment_profile_edit"
+        tools:layout="@layout/fragment_profile_edit" />
 </navigation>
