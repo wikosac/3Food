@@ -11,7 +11,6 @@ import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import org.d3ifcool.a3food.databinding.ActivityLoginBinding
-import org.d3ifcool.a3food.ui.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 

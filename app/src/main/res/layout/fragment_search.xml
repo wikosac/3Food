@@ -57,7 +57,6 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/searchView"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="305dp"
         android:layout_height="wrap_content"
         android:hint="@string/app_name"

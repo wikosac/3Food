@@ -9,15 +9,25 @@
         android:id="@+id/navigation_home"
         android:name="org.d3ifcool.a3food.ui.dashboard.DashboardFragment"
         android:label="DashboardFragment"
-        tools:layout="@layout/fragment_dashboard"/>
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_navigation_home_self"
+            app:destination="@id/navigation_search" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_setting"
+            app:destination="@id/navigation_setting" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_search"
         android:name="org.d3ifcool.a3food.ui.search.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/activity_search">
+        tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_navigation_search_to_mapsFragment"
             app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_navigation_search_to_navigation_setting"
+            app:destination="@id/navigation_setting" />
     </fragment>
     <fragment
         android:id="@+id/navigation_setting"
@@ -27,6 +37,12 @@
         <action
             android:id="@+id/action_navigation_setting_to_profileEditFragment"
             app:destination="@id/profileEditFragment" />
+        <action
+            android:id="@+id/action_navigation_setting_to_navigation_search"
+            app:destination="@id/navigation_search" />
+        <action
+            android:id="@+id/action_navigation_setting_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
     <fragment
         android:id="@+id/mapsFragment"

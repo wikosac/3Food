@@ -8,9 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.d3ifcool.a3food.data.Food
 import org.d3ifcool.a3food.databinding.FoodListBinding
-import org.d3ifcool.a3food.ui.DetailActivity
-import org.d3ifcool.a3food.ui.MainAdapter
-import org.d3ifcool.a3food.ui.search.SearchActivity
+import org.d3ifcool.a3food.DetailActivity
 
 class DashboardAdapter(private val handler: ClickHandler) :
     ListAdapter<Food, DashboardAdapter.ViewHolder>(DIFF_CALLBACK) {

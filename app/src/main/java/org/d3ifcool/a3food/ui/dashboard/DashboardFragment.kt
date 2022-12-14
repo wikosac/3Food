@@ -13,7 +13,7 @@ import org.d3ifcool.a3food.R
 import org.d3ifcool.a3food.data.Food
 import org.d3ifcool.a3food.data.FoodDb
 import org.d3ifcool.a3food.databinding.FragmentDashboardBinding
-import org.d3ifcool.a3food.ui.MainActivity
+import org.d3ifcool.a3food.MainActivity
 
 class DashboardFragment : Fragment() {
 
@@ -31,7 +31,7 @@ class DashboardFragment : Fragment() {
         }
         override fun onCreateActionMode(mode: ActionMode?,
                                         menu: Menu?): Boolean {
-            mode?.menuInflater?.inflate(R.menu.action_bar, menu)
+            mode?.menuInflater?.inflate(R.menu.main_menu, menu)
             return true
         }
         override fun onPrepareActionMode(mode: ActionMode?,

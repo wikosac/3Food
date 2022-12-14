@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import org.d3ifcool.a3food.ui.MainActivity
 
 class SplashActivity : AppCompatActivity()
 {

@@ -1,4 +1,4 @@
-package org.d3ifcool.a3food.ui
+package org.d3ifcool.a3food
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
