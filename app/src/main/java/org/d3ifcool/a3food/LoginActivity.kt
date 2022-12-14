@@ -17,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
 
     private val contract = FirebaseAuthUIActivityResultContract()
     private val signInLauncher = registerForActivityResult(contract) {this.onSignInResult(it) }
-//    private val authState = FirebaseUserLiveData()
+    private val authState = FirebaseUserLiveData()
     private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,10 +27,14 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.login.setOnClickListener { mulaiLogin() }
         binding.lewati.setOnClickListener { lewati() }
-//        authState.observe(this, { updateUI(it) })
+        authState.observe(this, { updateUI(it) })
     }
 
     private fun mulaiLogin() {
+        if (binding.login.text == getString(R.string.logout)) {
+            AuthUI.getInstance().signOut(this)
+            return
+        }
         val providers = arrayListOf(AuthUI.IdpConfig.GoogleBuilder().build())
         val intent = AuthUI.getInstance()
             .createSignInIntentBuilder()
@@ -48,11 +52,10 @@ class LoginActivity : AppCompatActivity() {
     @SuppressLint("SuspiciousIndentation")
     private fun updateUI(user: FirebaseUser?) {
         val intent = Intent(this, MainActivity::class.java)
-        if (user == null)
-            binding.login.text = getString(R.string.login)
+        binding.login.text = if (user == null)
+            getString(R.string.login)
         else
-            startActivity(intent)
-            finish()
+            getString(R.string.logout)
     }
 
     private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {

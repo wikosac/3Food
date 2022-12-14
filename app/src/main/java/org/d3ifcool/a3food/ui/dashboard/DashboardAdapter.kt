@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import org.d3ifcool.a3food.data.Food
 import org.d3ifcool.a3food.databinding.FoodListBinding
+import org.d3ifcool.a3food.ui.DetailActivity
 import org.d3ifcool.a3food.ui.search.SearchActivity
 
 class DashboardAdapter(private val data: List<Food>) :
@@ -20,7 +21,7 @@ class DashboardAdapter(private val data: List<Food>) :
             tokoTextView.text = food.toko
             hargaTextView.text = food.harga
             root.setOnClickListener {
-                val intent = Intent(root.context, SearchActivity::class.java)
+                val intent = Intent(root.context, DetailActivity::class.java)
 //                intent.putExtra()
                 root.context.startActivity(intent)
             }

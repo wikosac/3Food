@@ -6,11 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.firebase.ui.auth.AuthUI
-import com.google.firebase.auth.FirebaseUser
-import org.d3ifcool.a3food.ProfileEditFragment
-import org.d3ifcool.a3food.R
+import org.d3ifcool.a3food.LoginActivity
 import org.d3ifcool.a3food.databinding.FragmentSettingBinding
 
 class SettingFragment : Fragment() {
@@ -27,8 +23,9 @@ class SettingFragment : Fragment() {
     ): View? {
         binding = FragmentSettingBinding.inflate(layoutInflater, container, false)
 
-        binding.editBtn?.setOnClickListener {
-//            val intent = Intent(this, ProfileEditFragment::class.java)
+        binding.logout?.setOnClickListener {
+            val intent = Intent(activity, LoginActivity::class.java)
+            startActivity(intent)
         }
 
         return binding.root

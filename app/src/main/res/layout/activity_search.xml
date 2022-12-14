@@ -48,24 +48,37 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/eating_1" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/searchView"
-        android:layout_width="340dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@id/searchTitle"
-        app:layout_constraintTop_toBottomOf="@+id/divider">
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="305dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/searchTitle"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/divider">-->
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/app_name"/>
-    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/searchView"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/searchTitle"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <ImageButton
+        android:id="@+id/magniGlass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView"
+        app:layout_constraintStart_toEndOf="@+id/searchView"
+        app:layout_constraintTop_toTopOf="@+id/searchView"
+        app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
         android:layout_width="331dp"
         android:layout_height="171dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="88dp"
         app:layout_constraintStart_toStartOf="@+id/searchTitle"
         app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
@@ -78,7 +91,17 @@
         app:layout_constraintStart_toStartOf="@+id/mapsTxt"
         app:layout_constraintTop_toBottomOf="@+id/mapsTxt" />
 
-<!--    <com.google.android.material.textfield.TextInputLayout-->
+    <TextView
+        android:id="@+id/testOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/app_name"
+        app:layout_constraintStart_toStartOf="@+id/searchView"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
 <!--        android:layout_width="409dp"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        tools:layout_editor_absoluteX="1dp"-->

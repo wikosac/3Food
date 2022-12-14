@@ -19,8 +19,6 @@ import org.d3ifcool.a3food.databinding.FragmentSettingBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private val contract = FirebaseAuthUIActivityResultContract()
-    private val signInLauncher = registerForActivityResult(contract) {  }
     private val viewModel: MainViewModel by lazy {
         val dataSource = FoodDb.getInstance().dao
         val factory = MainViewModelFactory(dataSource)
@@ -34,9 +32,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         bind = FragmentSettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        bind.login?.setOnClickListener { mulaiLogin() }
-        viewModel.authState.observe(this, { updateUI(it) })
 
         // bottom navbar
         val navView: BottomNavigationView = binding.navView
@@ -52,26 +47,5 @@ class MainActivity : AppCompatActivity() {
 //                .replace(R.id.container, DashboardFragment.newInstance())
 //                .commitNow()
 //        }
-    }
-
-    private fun updateUI(user: FirebaseUser?) {
-        bind.login!!.text = if (user == null)
-            getString(R.string.login)
-        else
-            getString(R.string.logout)
-    }
-
-    private fun mulaiLogin() {
-        if (bind.login!!.text == getString(R.string.logout)) {
-            AuthUI.getInstance().signOut(this)
-            return
-        }
-
-        val providers = arrayListOf(AuthUI.IdpConfig.GoogleBuilder().build())
-        val intent = AuthUI.getInstance()
-            .createSignInIntentBuilder()
-            .setAvailableProviders(providers)
-            .build()
-        signInLauncher.launch(intent)
     }
 }

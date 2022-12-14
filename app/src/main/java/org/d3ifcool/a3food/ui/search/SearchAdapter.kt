@@ -13,6 +13,9 @@ class SearchAdapter(private val data: List<Key>) :
         private val binding: FoodListBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
+//        fun bind() = with(binding) {
+//            namaTextView.text = food.nama
+//        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashboardAdapter.ViewHolder {

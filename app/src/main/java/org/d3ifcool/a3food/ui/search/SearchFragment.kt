@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import org.d3ifcool.a3food.R
+import org.d3ifcool.a3food.databinding.ActivitySearchBinding
 
 class SearchFragment : Fragment() {
+
+    private lateinit var binding: ActivitySearchBinding
 
     companion object {
         fun newInstance() = SearchFragment()
@@ -20,13 +23,15 @@ class SearchFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.activity_search, container, false)
+        binding = ActivitySearchBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.magniGlass.setOnClickListener {
+            val keyword = binding.searchView.text.toString()
+            binding.testOutput.text = keyword
+        }
     }
-
 }
