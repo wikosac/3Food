@@ -3,16 +3,59 @@ package org.d3ifcool.a3food.ui.dashboard
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.d3ifcool.a3food.data.Food
 import org.d3ifcool.a3food.databinding.FoodListBinding
 import org.d3ifcool.a3food.ui.DetailActivity
+import org.d3ifcool.a3food.ui.MainAdapter
 import org.d3ifcool.a3food.ui.search.SearchActivity
 
-class DashboardAdapter(private val data: List<Food>) :
-    RecyclerView.Adapter<DashboardAdapter.ViewHolder>() {
+class DashboardAdapter(private val handler: ClickHandler) :
+    ListAdapter<Food, DashboardAdapter.ViewHolder>(DIFF_CALLBACK) {
 
-    class ViewHolder(
+    interface ClickHandler {
+        fun onClick(position: Int, food: Food)
+        fun onLongClick(position: Int) : Boolean
+    }
+
+    companion object {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Food>() {
+            override fun areItemsTheSame(
+                oldData: Food, newData: Food
+            ): Boolean {
+                return oldData.id == newData.id
+            }
+            override fun areContentsTheSame(
+                oldData: Food, newData: Food
+            ): Boolean {
+                return oldData == newData
+            }
+        }
+    }
+
+    private val selectionIds = ArrayList<String>()
+
+    fun toggleSelection(pos: Int) {
+        val id = getItem(pos).id
+        if (selectionIds.contains(id))
+            selectionIds.remove(id)
+        else
+            selectionIds.add(id)
+        notifyDataSetChanged()
+    }
+
+    fun getSelection(): List<String> {
+        return selectionIds
+    }
+
+    fun resetSelection() {
+        selectionIds.clear()
+        notifyDataSetChanged()
+    }
+
+    inner class ViewHolder(
         private val binding: FoodListBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -20,7 +63,13 @@ class DashboardAdapter(private val data: List<Food>) :
             namaTextView.text = food.nama
             tokoTextView.text = food.toko
             hargaTextView.text = food.harga
-            root.setOnClickListener {
+
+            val pos = absoluteAdapterPosition
+            itemView.isSelected = selectionIds.contains(food.id)
+            itemView.setOnClickListener { handler.onClick(pos, food) }
+            itemView.setOnLongClickListener { handler.onLongClick(pos) }
+
+            itemView.setOnClickListener {
                 val intent = Intent(root.context, DetailActivity::class.java)
 //                intent.putExtra()
                 root.context.startActivity(intent)
@@ -35,10 +84,6 @@ class DashboardAdapter(private val data: List<Food>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(data[position])
-    }
-
-    override fun getItemCount(): Int {
-        return data.size
+        holder.bind(getItem(position))
     }
 }

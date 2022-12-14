@@ -1,16 +1,31 @@
 package org.d3ifcool.a3food.ui.dashboard
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.d3ifcool.a3food.data.Food
+import org.d3ifcool.a3food.data.FoodDao
 
-class DashboardViewModel : ViewModel() {
+class DashboardViewModel(private val db : FoodDao) : ViewModel() {
 
-    fun getData(): List<Food> {
-        return listOf(
-            Food("1","Nasi Goreng", "Warung Pak Rebo", "Rp15000"),
-            Food("2","Nasi Goreng", "Warung Pak Rebo", "Rp15000"),
-            Food("3","Nasi Goreng", "Warung Pak Rebo", "Rp15000"),
-            Food("4","Nasi Goreng", "Warung Pak Rebo", "Rp15000")
-        )
+    val data = db.getData()
+
+    fun insertData(food: Food) {
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                db.insertData(food)
+            }
+        }
+    }
+
+    fun deleteData(ids: List<String>) {
+        val newIds = ids.toList()
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                db.deleteData(newIds)
+            }
+        }
     }
 }

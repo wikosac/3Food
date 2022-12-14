@@ -16,5 +16,10 @@
     <string name="makanan">Makanan</string>
     <string name="minuman">Minuman</string>
 
-    >>>>>>> a429ab191ad9de66f7368c1aea017d4d94dfb568
+    <string name="tidak_ada_data">Tidak ada data</string>
+    <string name="food_klik">%1$s diklik!</string>
+    <string name="hapus">Hapus</string>
+    <string name="pesan_hapus">Hapus mahasiswa terpilih?</string>
+    <string name="simpan">Simpan</string>
+    <string name="batal">Batal</string>
 </resources>

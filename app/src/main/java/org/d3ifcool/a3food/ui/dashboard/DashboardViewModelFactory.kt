@@ -1,15 +1,16 @@
-package org.d3ifcool.a3food.ui
+package org.d3ifcool.a3food.ui.dashboard
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import org.d3ifcool.a3food.data.FoodDao
+import org.d3ifcool.a3food.ui.MainViewModel
 
-class MainViewModelFactory(private val dataSource: FoodDao) : ViewModelProvider.Factory {
+class DashboardViewModelFactory(private val dataSource: FoodDao) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
+        if (modelClass.isAssignableFrom(DashboardViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
-            return MainViewModel(dataSource) as T
+            return DashboardViewModel(dataSource) as T
         }
         throw IllegalArgumentException("Unable to construct ViewModel")
     }
