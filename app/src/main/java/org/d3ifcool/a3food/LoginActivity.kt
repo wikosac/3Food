@@ -24,13 +24,13 @@ class LoginActivity : AppCompatActivity() {
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.login.setOnClickListener { mulaiLogin() }
+        binding.loginButton.setOnClickListener { mulaiLogin() }
         binding.lewati.setOnClickListener { lewati() }
         authState.observe(this, { updateUI(it) })
     }
 
     private fun mulaiLogin() {
-        if (binding.login.text == getString(R.string.logout)) {
+        if (binding.loginButton.text == getString(R.string.logout)) {
             AuthUI.getInstance().signOut(this)
             return
         }
@@ -51,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
     @SuppressLint("SuspiciousIndentation")
     private fun updateUI(user: FirebaseUser?) {
         val intent = Intent(this, MainActivity::class.java)
-        binding.login.text = if (user == null)
+        binding.loginButton.text = if (user == null)
             getString(R.string.login)
         else
             getString(R.string.logout)
