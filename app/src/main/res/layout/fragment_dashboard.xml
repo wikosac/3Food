@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dashboardTitle" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/profile"
         android:layout_width="66dp"
         android:layout_height="57dp"
