@@ -38,21 +38,21 @@
         android:src="@drawable/eating" />
 
     <!--    <HorizontalScrollView-->
-<!--        android:id="@+id/horizontalScrollView"-->
-<!--        android:layout_width="411dp"-->
-<!--        android:layout_height="159dp"-->
-<!--        android:contentDescription="@string/horizontalImage"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textView4">-->
+    <!--        android:id="@+id/horizontalScrollView"-->
+    <!--        android:layout_width="411dp"-->
+    <!--        android:layout_height="159dp"-->
+    <!--        android:contentDescription="@string/horizontalImage"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textView4">-->
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:orientation="vertical" />-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:orientation="vertical" />-->
 
-<!--</HorizontalScrollView>-->
+    <!--</HorizontalScrollView>-->
 
 
     <TextView
