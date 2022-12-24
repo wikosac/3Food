@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:title="Maps"
-        android:id="@+id/action_navigation_search_to_mapsFragment"
-        app:showAsAction="collapseActionView" />
-    <item
-        android:title="Maps"
         android:id="@+id/menu_maps"
         android:icon="@drawable/ic_baseline_map_24"
         app:showAsAction="always" />

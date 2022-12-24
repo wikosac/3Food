@@ -1,4 +1,4 @@
-package org.d3ifcool.a3food
+package org.d3ifcool.a3food.ui
 
 import androidx.lifecycle.ViewModel
 

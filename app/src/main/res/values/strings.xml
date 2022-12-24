@@ -22,4 +22,5 @@
     <string name="pesan_hapus">Hapus mahasiswa terpilih?</string>
     <string name="simpan">Simpan</string>
     <string name="batal">Batal</string>
+    <string name="cari_lokasi">Cari tempat makan di sekitar...</string>
 </resources>

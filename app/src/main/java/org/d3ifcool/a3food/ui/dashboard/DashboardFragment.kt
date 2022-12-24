@@ -109,7 +109,7 @@ class DashboardFragment : Fragment() {
         }
         viewModel.data.observe(viewLifecycleOwner, {
             myAdapter.submitList(it)
-            binding.emptyView.visibility = if (it.isEmpty())
+            binding.emptyView?.visibility = if (it.isEmpty())
                 View.VISIBLE
             else
                 View.GONE

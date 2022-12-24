@@ -18,11 +18,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Settings"
             android:layout_centerInParent="true"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="18sp"/>
+            android:text="Settings"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <ScrollView
@@ -104,7 +103,6 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="Mode Malam"
-                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/nightModeIcon"/>
 
@@ -137,7 +135,6 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="Notifikasi"
-                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/notificationIcon"/>
 
@@ -170,7 +167,6 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="Akun Privat"
-                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/privateAcountIcon"/>
 
@@ -213,7 +209,6 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="Security &amp; Privacy"
-                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/securityIcon"/>
                 </RelativeLayout>
@@ -238,7 +233,6 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="Ukuran Text"
-                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/textIcon"/>
                 </RelativeLayout>
@@ -263,13 +257,13 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="Bahasa"
-                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/languagesIcon"/>
                 </RelativeLayout>
 
                 <!-- Langue -->
                 <RelativeLayout
+                    android:id="@+id/logoutView"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -290,7 +284,6 @@
                         android:layout_centerVertical="true"
                         android:text="@string/logout"
                         android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_toEndOf="@+id/aboutUsIcon" />
                 </RelativeLayout>
             </LinearLayout>

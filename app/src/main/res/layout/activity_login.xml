@@ -44,7 +44,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/round_back_white"
-                android:drawableStart="@drawable/google"
+                android:drawableStart="@drawable/common_google_signin_btn_icon_dark_normal"
                 android:drawablePadding="16dp"
                 android:padding="15dp"
                 android:text="Google Acount"
