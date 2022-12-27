@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#7BCEFF</color>
     <color name="transparent">#00000000</color>
-    <color name="gray">#978F8F</color>
+    <color name="gray">#9A9A9A</color>
 
     <color name="primary">#1B023B</color>
     <color name="secondary">#FF03DAC5</color>
@@ -19,5 +19,6 @@
     <color name="notification">#13B2C3</color>
     <color name="private_account">#E6A326</color>
     <color name="security">#D95F69</color>
+    <color name="blueSky">#E1EFFC</color>
 
 </resources>

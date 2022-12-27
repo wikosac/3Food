@@ -51,8 +51,8 @@
         android:layout_marginBottom="40dp"
         android:text="@string/lanjut"
         android:textColor="@color/blue"
-        android:textSize="22sp"
         android:textStyle="bold"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

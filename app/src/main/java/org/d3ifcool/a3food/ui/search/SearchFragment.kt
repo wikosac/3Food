@@ -51,6 +51,6 @@ class SearchFragment : Fragment() {
             return "Inputan gabisa simbol"
         }
 
-        return key
+        return "Hasil Pencarian: $key"
     }
 }

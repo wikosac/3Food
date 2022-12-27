@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.activity.result.registerForActivityResult
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.google.firebase.auth.FirebaseAuth
@@ -57,12 +58,13 @@ class SettingFragment : Fragment() {
 //            signInLauncher?.launch(intent)
         }
         binding.ubahProfile!!.setOnClickListener {
-            val fragment: Fragment = ProfileEditFragment()
-            requireActivity().supportFragmentManager.beginTransaction()
-                .add(fragment, "editP") // Add this transaction to the back stack (name is an optional name for this back stack state, or null).
-                .addToBackStack(null)
-                .replace(R.id.container, fragment)
-                .commit()
+            findNavController().navigate(R.id.action_navigation_setting_to_profileEditFragment)
+//            val fragment: Fragment = ProfileEditFragment()
+//            requireActivity().supportFragmentManager.beginTransaction()
+//                .add(fragment, "editP")
+//                .addToBackStack(null)
+//                .replace(R.id.container, fragment)
+//                .commit()
         }
     }
 
