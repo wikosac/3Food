@@ -1,16 +1,15 @@
 package org.d3ifcool.a3food.ui.search
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.widget.TextView.OnEditorActionListener
 import androidx.core.text.isDigitsOnly
-import androidx.lifecycle.ViewModelProvider
-import org.d3ifcool.a3food.data.FoodDb
+import androidx.fragment.app.Fragment
 import org.d3ifcool.a3food.databinding.FragmentSearchBinding
-import org.d3ifcool.a3food.ui.dashboard.DashboardViewModel
-import org.d3ifcool.a3food.ui.dashboard.DashboardViewModelFactory
+
 
 class SearchFragment : Fragment() {
 
@@ -28,11 +27,19 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.magniGlass.setOnClickListener {
-            val keyword = binding.searchView.text.toString()
-            val validKey = validation(keyword)
-            binding.testOutput.text = validKey
-        }
+        binding.searchView.setOnEditorActionListener(OnEditorActionListener { v, actionId, event ->
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                performSearch()
+                return@OnEditorActionListener true
+            }
+            false
+        })
+    }
+
+    fun performSearch() {
+        val keyword = binding.searchView.text.toString()
+        val validKey = validation(keyword)
+        binding.testOutput.text = validKey
     }
 
     fun validation(key: String): String {
