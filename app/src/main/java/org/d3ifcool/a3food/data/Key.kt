@@ -4,6 +4,6 @@ import com.google.firebase.database.Exclude
 
 data class Key(
     @get:Exclude
-    var key: String,
-    var value: String
+    var id: String = "",
+    var keyword: String = ""
 )

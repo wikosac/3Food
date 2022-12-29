@@ -22,6 +22,8 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        supportActionBar?.hide()
+
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.loginButton.setOnClickListener { mulaiLogin() }
@@ -40,6 +42,9 @@ class LoginActivity : AppCompatActivity() {
             .setAvailableProviders(providers)
             .build()
         signInLauncher.launch(intent)
+//        val intentZ = Intent(this, MainActivity::class.java)
+//        startActivity(intentZ)
+//        finish()
     }
 
     private fun lewati() {
@@ -50,7 +55,6 @@ class LoginActivity : AppCompatActivity() {
 
     @SuppressLint("SuspiciousIndentation")
     private fun updateUI(user: FirebaseUser?) {
-        val intent = Intent(this, MainActivity::class.java)
         binding.loginButton.text = if (user == null)
             getString(R.string.login)
         else

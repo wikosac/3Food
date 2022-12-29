@@ -46,12 +46,16 @@
     </fragment>
     <fragment
         android:id="@+id/mapsFragment"
-        android:name="org.d3ifcool.a3food.MapsFragment"
+        android:name="org.d3ifcool.a3food.ui.MapsFragment"
         android:label="fragment_maps"
         tools:layout="@layout/fragment_maps" />
     <fragment
         android:id="@+id/profileEditFragment"
-        android:name="org.d3ifcool.a3food.ProfileEditFragment"
+        android:name="org.d3ifcool.a3food.ui.ProfileEditFragment"
         android:label="fragment_profile_edit"
-        tools:layout="@layout/fragment_profile_edit" />
+        tools:layout="@layout/fragment_profile_edit" >
+        <action
+            android:id="@+id/action_profileEditFragment_to_navigation_setting"
+            app:destination="@id/navigation_setting" />
+    </fragment>
 </navigation>

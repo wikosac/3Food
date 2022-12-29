@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/teal_200"
     tools:context=".ui.setting.SettingFragment">
 
     <RelativeLayout
@@ -19,11 +18,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Settings"
             android:layout_centerInParent="true"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="18sp"/>
+            android:text="Settings"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <ScrollView
@@ -49,13 +47,12 @@
                     android:src="@drawable/eating"/>
 
                 <TextView
-                    android:id="@+id/editBtn"
+                    android:id="@+id/ubahProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Ubah"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:text="AlluringJk"
+                    android:textStyle="bold"/>
             </LinearLayout>
 
             <LinearLayout
@@ -106,7 +103,6 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="Mode Malam"
-                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/nightModeIcon"/>
 
@@ -120,70 +116,68 @@
                 </RelativeLayout>
 
                 <!-- Notification -->
-<!--                <RelativeLayout-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content">-->
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-<!--                    <ImageView-->
-<!--                        android:layout_width="40dp"-->
-<!--                        android:id="@+id/notificationIcon"-->
-<!--                        android:layout_height="40dp"-->
-<!--                        android:src="@drawable/ic_baseline_notifications_24"-->
-<!--                        android:background="@drawable/round_back_notification"-->
-<!--                        android:padding="12dp"/>-->
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:id="@+id/notificationIcon"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_baseline_notifications_24"
+                        android:background="@drawable/round_back_notification"
+                        android:padding="12dp"/>
 
-<!--                    <TextView-->
-<!--                        android:layout_marginStart="15dp"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_centerVertical="true"-->
-<!--                        android:text="Notifikasi"-->
-<!--                        android:textColor="@color/white"-->
-<!--                        android:textStyle="bold"-->
-<!--                        android:layout_toEndOf="@+id/notificationIcon"/>-->
+                    <TextView
+                        android:layout_marginStart="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Notifikasi"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/notificationIcon"/>
 
-<!--                    <androidx.appcompat.widget.SwitchCompat-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_alignParentEnd="true"-->
-<!--                        android:layout_centerVertical="true"-->
-<!--                        android:switchMinWidth="50dp"-->
-<!--                        android:theme="@style/notificationSwitch"/>-->
-<!--                </RelativeLayout>-->
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:switchMinWidth="50dp"
+                        android:theme="@style/notificationSwitch"/>
+                </RelativeLayout>
 
                 <!-- Private -->
-<!--                <RelativeLayout-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content">-->
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-<!--                    <ImageView-->
-<!--                        android:layout_width="40dp"-->
-<!--                        android:id="@+id/privateAcountIcon"-->
-<!--                        android:layout_height="40dp"-->
-<!--                        android:src="@drawable/ic_baseline_privacy_tip_24"-->
-<!--                        android:background="@drawable/round_back_private_ccount"-->
-<!--                        android:padding="12dp"/>-->
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:id="@+id/privateAcountIcon"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_baseline_privacy_tip_24"
+                        android:background="@drawable/round_back_private_ccount"
+                        android:padding="12dp"/>
 
-<!--                    <TextView-->
-<!--                        android:layout_marginStart="15dp"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_centerVertical="true"-->
-<!--                        android:text="Akun Privat"-->
-<!--                        android:textColor="@color/white"-->
-<!--                        android:textStyle="bold"-->
-<!--                        android:layout_toEndOf="@+id/privateAcountIcon"/>-->
+                    <TextView
+                        android:layout_marginStart="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Akun Privat"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/privateAcountIcon"/>
 
-<!--                    <androidx.appcompat.widget.SwitchCompat-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_alignParentEnd="true"-->
-<!--                        android:layout_centerVertical="true"-->
-<!--                        android:switchMinWidth="50dp"-->
-<!--                        android:theme="@style/privateAccountSwitch"/>-->
-<!--                </RelativeLayout>-->
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:switchMinWidth="50dp"
+                        android:theme="@style/privateAccountSwitch"/>
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -205,7 +199,7 @@
                         android:layout_width="40dp"
                         android:id="@+id/securityIcon"
                         android:layout_height="40dp"
-                        android:src="@drawable/ic_baseline_people_24"
+                        android:src="@drawable/ic_baseline_lock_24"
                         android:background="@drawable/round_back_security"
                         android:padding="12dp"/>
 
@@ -214,8 +208,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="About us"
-                        android:textColor="@color/white"
+                        android:text="Security &amp; Privacy"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/securityIcon"/>
                 </RelativeLayout>
@@ -240,7 +233,6 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="Ukuran Text"
-                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/textIcon"/>
                 </RelativeLayout>
@@ -265,13 +257,13 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="Bahasa"
-                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_toEndOf="@+id/languagesIcon"/>
                 </RelativeLayout>
 
                 <!-- Langue -->
                 <RelativeLayout
+                    android:id="@+id/logoutView"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -292,7 +284,6 @@
                         android:layout_centerVertical="true"
                         android:text="@string/logout"
                         android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_toEndOf="@+id/aboutUsIcon" />
                 </RelativeLayout>
             </LinearLayout>
