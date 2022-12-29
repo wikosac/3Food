@@ -55,7 +55,7 @@ class DashboardFragment : Fragment() {
                     actionMode?.invalidate()
                 return
             }
-            val message = getString(R.string.food_klik, food.nama)
+            val message = getString(R.string.food_klik, food.toko)
             Toast.makeText(context, message, Toast.LENGTH_LONG).show()
         }
 

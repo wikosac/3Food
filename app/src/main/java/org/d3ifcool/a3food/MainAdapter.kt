@@ -52,9 +52,9 @@ class MainAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(food: Food) = with(binding) {
-            namaTextView.text = food.nama
+            alamatTextView.text = food.alamat
             tokoTextView.text = food.toko
-            hargaTextView.text = food.harga
+            ratingTextView.text = food.rating
 
             val pos = absoluteAdapterPosition
             itemView.isSelected = selectionIds.contains(food.id)

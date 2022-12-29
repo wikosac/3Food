@@ -58,9 +58,9 @@ class SearchAdapter(private val handler: ClickHandler) :
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(food: Food) = with(binding) {
-            namaTextView.text = food.nama
             tokoTextView.text = food.toko
-            hargaTextView.text = food.harga
+            alamatTextView.text = food.alamat
+            ratingTextView.text = food.rating
 
             val pos = absoluteAdapterPosition
             itemView.isSelected = selectionIds.contains(food.id)
