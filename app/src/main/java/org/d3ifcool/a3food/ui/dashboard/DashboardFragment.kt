@@ -1,7 +1,9 @@
 package org.d3ifcool.a3food.ui.dashboard
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.view.ActionMode
@@ -9,6 +11,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
 import org.d3ifcool.a3food.R
 import org.d3ifcool.a3food.data.Food
 import org.d3ifcool.a3food.data.FoodDb
@@ -87,18 +92,26 @@ class DashboardFragment : Fragment() {
     ): View {
         binding = FragmentDashboardBinding.inflate(layoutInflater, container, false)
         return binding.root
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        with(binding.recyclerView) {
-//            addItemDecoration(
-//                DividerItemDecoration(context, androidx.recyclerview.widget.RecyclerView.VERTICAL)
-//            )
-//            adapter = DashboardAdapter(viewModel.getData())
-//            setHasFixedSize(true)
+
+        // Create a storage reference from our app
+//        val storageRef = FirebaseStorage.getInstance().reference;
+//
+//// Create a reference with an initial file path and name
+//        val pathReference = storageRef.child("toko/fik.png")
+//
+//        storageRef.child("toko/fit.png").downloadUrl.addOnSuccessListener {
+//            // Got the download URL for 'users/me/profile.png'
+//            Glide.with(this /* context */)
+//                .load()
+//                .into(binding.profileImg)
+//        }.addOnFailureListener {
+//            // Handle any errors
+//            Log.d("storage", "onViewCreated: $storageRef")
+//            Log.d("storage", "onViewCreated: $pathReference")
 //        }
 
         myAdapter = DashboardAdapter(handler)
@@ -120,9 +133,5 @@ class DashboardFragment : Fragment() {
         val dataSource = FoodDb.getInstance().dao
         val factory = DashboardViewModelFactory(dataSource)
         ViewModelProvider(this, factory).get(DashboardViewModel::class.java)
-    }
-
-    fun processDialog(food: Food) {
-        viewModel.insertData(food)
     }
 }
