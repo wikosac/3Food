@@ -1,29 +1,32 @@
 package org.d3ifcool.a3food.ui.dashboard
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.view.ActionMode
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.database.*
 import org.d3ifcool.a3food.R
 import org.d3ifcool.a3food.data.Food
 import org.d3ifcool.a3food.data.FoodDb
 import org.d3ifcool.a3food.databinding.FragmentDashboardBinding
 import org.d3ifcool.a3food.MainActivity
+import org.d3ifcool.a3food.storage.ImageAdapter
+import org.d3ifcool.a3food.storage.ImageData
 
 class DashboardFragment : Fragment() {
 
     private lateinit var binding: FragmentDashboardBinding
     private lateinit var myAdapter: DashboardAdapter
+    private lateinit var listImages: ArrayList<ImageData>
+    private lateinit var databaseReference: DatabaseReference
+
+
     private var actionMode: ActionMode? = null
     private val actionModeCallback = object : ActionMode.Callback {
         override fun onActionItemClicked(mode: ActionMode?,
@@ -97,36 +100,43 @@ class DashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Create a storage reference from our app
-//        val storageRef = FirebaseStorage.getInstance().reference;
-//
-//// Create a reference with an initial file path and name
-//        val pathReference = storageRef.child("toko/fik.png")
-//
-//        storageRef.child("toko/fit.png").downloadUrl.addOnSuccessListener {
-//            // Got the download URL for 'users/me/profile.png'
-//            Glide.with(this /* context */)
-//                .load()
-//                .into(binding.profileImg)
-//        }.addOnFailureListener {
-//            // Handle any errors
-//            Log.d("storage", "onViewCreated: $storageRef")
-//            Log.d("storage", "onViewCreated: $pathReference")
-//        }
+        //image from storage
+        binding.horizontalRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        listImages = arrayListOf()
 
+        databaseReference = FirebaseDatabase.getInstance().getReference("placeImage")
+        databaseReference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (dataSnapshot in snapshot.children) {
+                        val list = dataSnapshot.getValue(ImageData::class.java)
+                        listImages.add(list!!)
+                    }
+                    binding.horizontalRecyclerView.adapter = ImageAdapter(requireContext(), listImages)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(requireContext(), error.toString(), Toast.LENGTH_SHORT)
+                    .show()
+            }
+
+        })
+
+        //recommendation
         myAdapter = DashboardAdapter(handler)
         with(binding.recyclerView) {
             addItemDecoration(DividerItemDecoration(context, RecyclerView.VERTICAL))
             setHasFixedSize(true)
             adapter = myAdapter
         }
-        viewModel.data.observe(viewLifecycleOwner, {
+        viewModel.data.observe(viewLifecycleOwner) {
             myAdapter.submitList(it)
-            binding.emptyView?.visibility = if (it.isEmpty())
+            binding.emptyView.visibility = if (it.isEmpty())
                 View.VISIBLE
             else
                 View.GONE
-        })
+        }
     }
 
     private val viewModel: DashboardViewModel by lazy {
