@@ -6,9 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import org.d3ifcool.a3food.data.Food
 import org.d3ifcool.a3food.databinding.FoodListBinding
 import org.d3ifcool.a3food.DetailActivity
+import org.d3ifcool.a3food.R
+import org.d3ifcool.a3food.network.PlaceApi
 
 class DashboardAdapter(private val handler: ClickHandler) :
     ListAdapter<Food, DashboardAdapter.ViewHolder>(DIFF_CALLBACK) {
@@ -61,6 +64,10 @@ class DashboardAdapter(private val handler: ClickHandler) :
             tokoTextView.text = food.toko
             alamatTextView.text = food.alamat
             ratingTextView.text = food.rating
+            Glide.with(imageList.context)
+                .load(PlaceApi.getPlaceUrl(food.toko))
+                .error(R.drawable.ic_baseline_broken_image_24)
+                .into(imageList)
 
             val pos = absoluteAdapterPosition
             itemView.isSelected = selectionIds.contains(food.id)

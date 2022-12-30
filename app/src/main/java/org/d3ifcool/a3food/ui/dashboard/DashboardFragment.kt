@@ -104,7 +104,7 @@ class DashboardFragment : Fragment() {
         binding.horizontalRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         listImages = arrayListOf()
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("placeImage")
+        databaseReference = FirebaseDatabase.getInstance().getReference("food")
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
@@ -130,6 +130,8 @@ class DashboardFragment : Fragment() {
             setHasFixedSize(true)
             adapter = myAdapter
         }
+
+        //if null
         viewModel.data.observe(viewLifecycleOwner) {
             myAdapter.submitList(it)
             binding.emptyView.visibility = if (it.isEmpty())
