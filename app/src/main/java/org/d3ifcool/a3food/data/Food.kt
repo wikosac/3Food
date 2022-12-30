@@ -5,7 +5,7 @@ import com.google.firebase.database.Exclude
 data class Food(
     @get:Exclude
     var id: String = "",
-    var nama: String = "",
+    var alamat: String = "",
     var toko: String = "",
-    var harga: String = ""
+    var rating: String = ""
 )

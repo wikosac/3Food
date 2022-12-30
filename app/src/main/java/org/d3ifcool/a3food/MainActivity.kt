@@ -4,16 +4,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.bumptech.glide.Glide
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import org.d3ifcool.a3food.data.FoodDb
+import com.google.firebase.storage.FirebaseStorage
 import org.d3ifcool.a3food.databinding.ActivityMainBinding
-import org.d3ifcool.a3food.ui.dashboard.DashboardViewModelFactory
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,16 +36,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_search, R.id.navigation_setting
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-
-//        fun navigateToMaps() {
-//            navController.navigate(R.id.action_navigation_search_to_mapsFragment)
-//        }
-//        if (savedInstanceState == null) {
-//            supportFragmentManager.beginTransaction()
-//                .replace(R.id.container, DashboardFragment.newInstance())
-//                .commitNow()
-//        }
+//        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

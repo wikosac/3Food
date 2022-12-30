@@ -14,13 +14,7 @@
         android:roundIcon="@drawable/eating"
         android:supportsRtl="true"
         android:theme="@style/Theme.3Food">
-        <activity
-            android:name=".OnboardingActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".MapsActivity"
             android:exported="false">
