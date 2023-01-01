@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,10 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/blueSky"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:paddingVertical="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:paddingVertical="4dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/searchTitle"
@@ -58,12 +57,12 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:hint="@string/cari_lokasi"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
         app:boxCornerRadiusTopStart="30dp"
-        android:layout_marginTop="16dp"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,8 +81,8 @@
         android:id="@+id/recyclerView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginTop="150dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="@+id/searchViewLayout"
         app:layout_constraintTop_toBottomOf="@+id/searchViewLayout">
@@ -133,11 +132,11 @@
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"
-        android:visibility="gone"
         android:layout_width="343dp"
         android:layout_height="251dp"
         android:layout_marginTop="40dp"
         android:contentDescription="@string/maps"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/mapsTxt"
         app:layout_constraintTop_toBottomOf="@+id/mapsTxt" />
 
@@ -146,9 +145,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        tools:text="@string/app_name"
         app:layout_constraintStart_toStartOf="@+id/searchViewLayout"
-        app:layout_constraintTop_toBottomOf="@+id/searchViewLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/searchViewLayout"
+        tools:text="@string/app_name" />
 
     <Button
         android:id="@+id/locationPermisBtn"
@@ -157,21 +156,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="144dp"
-        android:text="Fitur ini membutuhkan izin lokasi"
+        android:text="Lihat lokasi"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/mapsTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mapsTxt"
         app:layout_constraintVertical_bias="0.011" />
 
     <Button
         android:id="@+id/magniGlass"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="84dp"
-        android:textColor="@color/white"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:text="Button"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchViewLayout" />
 

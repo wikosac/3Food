@@ -2,6 +2,7 @@ package org.d3ifcool.a3food.ui.search
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.location.Geocoder
 import android.os.Bundle
 import android.util.Log
@@ -17,6 +18,9 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.vmadalin.easypermissions.EasyPermissions
 import com.vmadalin.easypermissions.dialogs.SettingsDialog
+import org.d3ifcool.a3food.DetailActivity
+import org.d3ifcool.a3food.MainActivity
+import org.d3ifcool.a3food.MapsActivity
 import org.d3ifcool.a3food.databinding.FragmentSearchBinding
 
 
@@ -62,10 +66,16 @@ class SearchFragment : Fragment(), EasyPermissions.PermissionCallbacks {
                         1
                     )
                     if (currentLocation != null) {
-                        Log.d("SearchFragment", currentLocation.first().countryName)
+                        Log.d("SearchFragment", currentLocation.first().adminArea)
+                        Log.d("SearchFragment", currentLocation.first().locality)
                         Log.d("SearchFragment", currentLocation.first().subLocality)
+                        Log.d("SearchFragment", location.latitude.toString())
+                        Log.d("SearchFragment", location.longitude.toString())
                     }
                 }
+                startActivity(
+                    Intent(requireActivity(), MapsActivity::class.java)
+                )
             } else {
                 requestLocationPermission()
             }
@@ -106,7 +116,7 @@ class SearchFragment : Fragment(), EasyPermissions.PermissionCallbacks {
     private fun requestLocationPermission() {
         EasyPermissions.requestPermissions(
             this,
-            "This application cannot work without Location Permission.",
+            "Fitur ini memerlukan izin lokasi",
             PERMISSION_LOCATION_REQUEST_CODE,
             Manifest.permission.ACCESS_FINE_LOCATION
         )
@@ -131,7 +141,7 @@ class SearchFragment : Fragment(), EasyPermissions.PermissionCallbacks {
     override fun onPermissionsGranted(requestCode: Int, perms: List<String>) {
         Toast.makeText(
             requireContext(),
-            "Permission Granted!",
+            "Izin diberikan!",
             Toast.LENGTH_SHORT
         ).show()
     }
