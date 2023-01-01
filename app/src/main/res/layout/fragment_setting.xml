@@ -37,7 +37,9 @@
             android:orientation="vertical"
             android:layout_marginTop="16dp">
 
-            <ImageView
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageProfile"
                 android:layout_width="252dp"
                 android:layout_height="254dp"
                 android:layout_gravity="center"
@@ -45,7 +47,7 @@
                 android:src="@drawable/eating" />
 
             <TextView
-                android:id="@+id/ubahProfile"
+                android:id="@+id/namaProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
