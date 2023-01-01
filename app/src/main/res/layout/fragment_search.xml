@@ -163,4 +163,16 @@
         app:layout_constraintTop_toBottomOf="@+id/mapsTxt"
         app:layout_constraintVertical_bias="0.011" />
 
+    <Button
+        android:id="@+id/magniGlass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="84dp"
+        android:textColor="@color/white"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchViewLayout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

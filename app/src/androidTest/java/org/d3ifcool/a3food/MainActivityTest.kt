@@ -19,47 +19,47 @@ class MainActivityTest {
         private val key4 = Key("4", "!@#$")
     }
 
-//    @Test
-//    fun searchTest() {
-//        // Jalankan MainActivity
-//        ActivityScenario.launch(MainActivity::class.java)
-//
-//        // input data to firebase realtime database
-//        onView(withId(R.id.navigation_search)).perform(click())
-//        onView(withId(R.id.searchView)).perform(click())
-//
-//        onView(withId(R.id.searchView)).perform(typeText(key1.keyword))
-//        SystemClock.sleep(2000)
-//        onView(withId(R.id.magniGlass)).perform(click())
-//        SystemClock.sleep(2000)
-//        onView(withId(R.id.searchView)).perform(clearText())
-//
-//        onView(withId(R.id.searchView)).perform(typeText(key2.keyword))
-//        SystemClock.sleep(2000)
-//        onView(withId(R.id.magniGlass)).perform(click())
-//        SystemClock.sleep(2000)
-//        onView(withId(R.id.searchView)).perform(clearText())
-//
-//        onView(withId(R.id.searchView)).perform(typeText(key3.keyword))
-//        SystemClock.sleep(2000)
-//        onView(withId(R.id.magniGlass)).perform(click())
-//        SystemClock.sleep(2000)
-//        onView(withId(R.id.searchView)).perform(clearText())
-//
-//        onView(withId(R.id.searchView)).perform(typeText(key4.keyword))
-//        SystemClock.sleep(2000)
-//        onView(withId(R.id.magniGlass)).perform(click())
-//        SystemClock.sleep(2000)
-//    }
-
     @Test
-    fun clickTest() {
-        // Jalankan Activity
+    fun searchTest() {
+        // Jalankan MainActivity
         ActivityScenario.launch(MainActivity::class.java)
 
-        SystemClock.sleep(2000)
+        // input data to firebase realtime database
         onView(withId(R.id.navigation_search)).perform(click())
+        onView(withId(R.id.searchView)).perform(click())
+
+        onView(withId(R.id.searchView)).perform(typeText(key1.keyword))
         SystemClock.sleep(2000)
-        onView(withId(R.id.navigation_setting)).perform(click())
+        onView(withId(R.id.magniGlass)).perform(click())
+        SystemClock.sleep(2000)
+        onView(withId(R.id.searchView)).perform(clearText())
+
+        onView(withId(R.id.searchView)).perform(typeText(key2.keyword))
+        SystemClock.sleep(2000)
+        onView(withId(R.id.magniGlass)).perform(click())
+        SystemClock.sleep(2000)
+        onView(withId(R.id.searchView)).perform(clearText())
+
+        onView(withId(R.id.searchView)).perform(typeText(key3.keyword))
+        SystemClock.sleep(2000)
+        onView(withId(R.id.magniGlass)).perform(click())
+        SystemClock.sleep(2000)
+        onView(withId(R.id.searchView)).perform(clearText())
+
+        onView(withId(R.id.searchView)).perform(typeText(key4.keyword))
+        SystemClock.sleep(2000)
+        onView(withId(R.id.magniGlass)).perform(click())
+        SystemClock.sleep(2000)
     }
+
+//    @Test
+//    fun clickTest() {
+//        // Jalankan Activity
+//        ActivityScenario.launch(MainActivity::class.java)
+//
+//        SystemClock.sleep(2000)
+//        onView(withId(R.id.navigation_search)).perform(click())
+//        SystemClock.sleep(2000)
+//        onView(withId(R.id.navigation_setting)).perform(click())
+//    }
 }
