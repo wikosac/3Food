@@ -58,21 +58,21 @@ class SearchFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         binding.magniGlass.setOnClickListener { performSearch() }
         binding.locationPermisBtn.setOnClickListener {
             if (hasLocationPermission()) {
-                fusedLocationProviderClient.lastLocation.addOnSuccessListener { location ->
-                    val geoCoder = Geocoder(requireContext())
-                    val currentLocation = geoCoder.getFromLocation(
-                        location.latitude,
-                        location.longitude,
-                        1
-                    )
-                    if (currentLocation != null) {
-                        Log.d("SearchFragment", currentLocation.first().adminArea)
-                        Log.d("SearchFragment", currentLocation.first().locality)
-                        Log.d("SearchFragment", currentLocation.first().subLocality)
-                        Log.d("SearchFragment", location.latitude.toString())
-                        Log.d("SearchFragment", location.longitude.toString())
-                    }
-                }
+//                fusedLocationProviderClient.lastLocation.addOnSuccessListener { location ->
+//                    val geoCoder = Geocoder(requireContext())
+//                    val currentLocation = geoCoder.getFromLocation(
+//                        location.latitude,
+//                        location.longitude,
+//                        1
+//                    )
+//                    if (currentLocation != null) {
+//                        Log.d("SearchFragment", currentLocation.first().adminArea)
+//                        Log.d("SearchFragment", currentLocation.first().locality)
+//                        Log.d("SearchFragment", currentLocation.first().subLocality)
+//                        Log.d("SearchFragment", location.latitude.toString())
+//                        Log.d("SearchFragment", location.longitude.toString())
+//                    }
+//                }
                 startActivity(
                     Intent(requireActivity(), MapsActivity::class.java)
                 )

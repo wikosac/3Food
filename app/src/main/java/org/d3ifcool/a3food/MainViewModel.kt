@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.d3ifcool.a3food.data.FirebaseUserLiveData
 import org.d3ifcool.a3food.data.Food
 import org.d3ifcool.a3food.data.FoodDao
 

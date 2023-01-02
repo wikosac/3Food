@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/tvTitleRecipe"
+                    android:id="@+id/namaToko"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kantin FIT"
@@ -80,7 +80,7 @@
             </RelativeLayout>
 
             <TextView
-                android:id="@+id/tvDesc"
+                android:id="@+id/alamatTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -113,7 +113,7 @@
                         android:src="@drawable/ic_baseline_star_border_24" />
 
                     <TextView
-                        android:id="@+id/desRating"
+                        android:id="@+id/ratingTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/restoRating"

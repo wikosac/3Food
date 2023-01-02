@@ -144,6 +144,6 @@ class DashboardFragment : Fragment() {
     private val viewModel: DashboardViewModel by lazy {
         val dataSource = FoodDb.getInstance().dao
         val factory = DashboardViewModelFactory(dataSource)
-        ViewModelProvider(this, factory).get(DashboardViewModel::class.java)
+        ViewModelProvider(this, factory)[DashboardViewModel::class.java]
     }
 }

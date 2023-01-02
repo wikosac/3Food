@@ -8,6 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
 private const val BASE_URL = "https://firebasestorage.googleapis.com/v0/b/food-e94a6.appspot.com/o/toko%2F"
+private const val SUFFIX_URL = ".png?alt=media"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -20,7 +21,7 @@ private val retrofit = Retrofit.Builder()
 
 interface PlaceApiService {
     @GET("static-api.json")
-    suspend fun getHewan(): List<Food>
+    suspend fun getPlace(): List<Food>
 }
 
 object PlaceApi {
@@ -29,6 +30,6 @@ object PlaceApi {
     }
 
     fun getPlaceUrl(nama: String): String {
-        return "$BASE_URL$nama.png?alt=media"
+        return "$BASE_URL $nama $SUFFIX_URL"
     }
 }

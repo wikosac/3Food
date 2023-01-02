@@ -29,24 +29,24 @@ class MainAdapter(
 
     private val selectionIds = ArrayList<String>()
 
-    fun toggleSelection(pos: Int) {
-        val id = getItem(pos).id
-        if (selectionIds.contains(id))
-            selectionIds.remove(id)
-        else
-            selectionIds.add(id)
-        notifyDataSetChanged()
-    }
-
-    fun getSelection(): List<String> {
-        return selectionIds
-    }
-
-    fun resetSelection() {
-        selectionIds.clear()
-        notifyDataSetChanged()
-    }
-
+//    fun toggleSelection(pos: Int) {
+//        val id = getItem(pos).id
+//        if (selectionIds.contains(id))
+//            selectionIds.remove(id)
+//        else
+//            selectionIds.add(id)
+//        notifyDataSetChanged()
+//    }
+//
+//    fun getSelection(): List<String> {
+//        return selectionIds
+//    }
+//
+//    fun resetSelection() {
+//        selectionIds.clear()
+//        notifyDataSetChanged()
+//    }
+//
     inner class ViewHolder(
         private val binding: FoodListBinding
     ) : RecyclerView.ViewHolder(binding.root) {

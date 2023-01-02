@@ -1,5 +1,6 @@
 package org.d3ifcool.a3food.ui.dashboard
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -16,10 +17,7 @@ import org.d3ifcool.a3food.network.PlaceApi
 class DashboardAdapter(private val handler: ClickHandler) :
     ListAdapter<Food, DashboardAdapter.ViewHolder>(DIFF_CALLBACK) {
 
-    interface ClickHandler {
-        fun onClick(position: Int, food: Food)
-        fun onLongClick(position: Int) : Boolean
-    }
+    private val selectionIds = ArrayList<String>()
 
     companion object {
         private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Food>() {
@@ -36,24 +34,9 @@ class DashboardAdapter(private val handler: ClickHandler) :
         }
     }
 
-    private val selectionIds = ArrayList<String>()
-
-    fun toggleSelection(pos: Int) {
-        val id = getItem(pos).id
-        if (selectionIds.contains(id))
-            selectionIds.remove(id)
-        else
-            selectionIds.add(id)
-        notifyDataSetChanged()
-    }
-
-    fun getSelection(): List<String> {
-        return selectionIds
-    }
-
-    fun resetSelection() {
-        selectionIds.clear()
-        notifyDataSetChanged()
+    interface ClickHandler {
+        fun onClick(position: Int, food: Food)
+        fun onLongClick(position: Int) : Boolean
     }
 
     inner class ViewHolder(
@@ -76,10 +59,32 @@ class DashboardAdapter(private val handler: ClickHandler) :
 
             itemView.setOnClickListener {
                 val intent = Intent(root.context, DetailActivity::class.java)
-//                intent.putExtra()
+                intent.putExtra("toko", food.toko)
+                intent.putExtra("alamat", food.alamat)
+                intent.putExtra("rating", food.rating)
+                intent.putExtra("img", PlaceApi.getPlaceUrl(food.toko))
                 root.context.startActivity(intent)
             }
         }
+    }
+
+    fun toggleSelection(pos: Int) {
+        val id = getItem(pos).id
+        if (selectionIds.contains(id))
+            selectionIds.remove(id)
+        else
+            selectionIds.add(id)
+        notifyDataSetChanged()
+    }
+
+    fun getSelection(): List<String> {
+        return selectionIds
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun resetSelection() {
+        selectionIds.clear()
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

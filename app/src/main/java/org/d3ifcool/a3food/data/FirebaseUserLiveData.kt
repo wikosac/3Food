@@ -1,4 +1,4 @@
-package org.d3ifcool.a3food
+package org.d3ifcool.a3food.data
 
 import androidx.lifecycle.LiveData
 import com.google.firebase.auth.FirebaseAuth
