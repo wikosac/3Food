@@ -35,4 +35,10 @@
         <item name="colorSwitchThumbNormal">#FFFFFF</item>
         <item name="android:foreground">#00FFFFFF</item>
     </style>
+
+    <style name="SearchView" parent="">
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

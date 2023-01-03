@@ -14,9 +14,8 @@
             android:layout_centerVertical="true"
             android:padding="10dp"
             android:text="Cari Makanan\nFavoritmu!"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textColor="@color/black"
+            android:textSize="24sp" />
 
         <ImageView
             android:layout_width="50dp"

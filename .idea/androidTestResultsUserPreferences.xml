@@ -3,6 +3,20 @@
   <component name="AndroidTestResultsUserPreferences">
     <option name="androidTestResultsTableState">
       <map>
+        <entry key="-1918549568">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="emulator-5554" value="120" />
+                  <entry key="samsung&#10; SCG02" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
         <entry key="-1895666998">
           <value>
             <AndroidTestResultsTableState>
@@ -63,6 +77,34 @@
             </AndroidTestResultsTableState>
           </value>
         </entry>
+        <entry key="632396357">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="emulator-5554" value="120" />
+                  <entry key="samsung&#10; SCG02" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="915424947">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="emulator-5554" value="120" />
+                  <entry key="samsung&#10; SCG02" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
         <entry key="1195487292">
           <value>
             <AndroidTestResultsTableState>
@@ -91,6 +133,34 @@
             </AndroidTestResultsTableState>
           </value>
         </entry>
+        <entry key="1527274415">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="emulator-5554" value="120" />
+                  <entry key="samsung&#10; SCG02" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="1537254323">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="emulator-5554" value="120" />
+                  <entry key="samsung&#10; SCG02" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
         <entry key="1612730193">
           <value>
             <AndroidTestResultsTableState>
@@ -101,6 +171,20 @@
                   <entry key="RR8T905P7CD" value="120" />
                   <entry key="Tests" value="360" />
                   <entry key="samsung&#10; SM-A325F" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="1838498857">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="emulator-5554" value="120" />
+                  <entry key="samsung&#10; SCG02" value="120" />
                 </map>
               </option>
             </AndroidTestResultsTableState>

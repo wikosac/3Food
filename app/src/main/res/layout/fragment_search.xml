@@ -56,7 +56,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@id/searchViewLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="340dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/cari_lokasi"
         app:boxCornerRadiusBottomEnd="30dp"
@@ -90,9 +90,10 @@
 
     <LinearLayout
         android:id="@+id/recyclerView2"
-        android:layout_width="350dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="88dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="@+id/searchViewLayout"
         app:layout_constraintTop_toBottomOf="@+id/searchViewLayout">
@@ -164,6 +165,7 @@
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:layout_marginStart="12dp"
         android:layout_marginTop="144dp"
         android:text="Fitur ini membutuhkan izin lokasi"

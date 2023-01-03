@@ -10,6 +10,7 @@ import androidx.activity.result.registerForActivityResult
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.google.firebase.auth.FirebaseAuth
@@ -57,21 +58,29 @@ class SettingFragment : Fragment() {
 //                .build()
 //            signInLauncher?.launch(intent)
         }
-        binding.ubahProfile!!.setOnClickListener {
-            findNavController().navigate(R.id.action_navigation_setting_to_profileEditFragment)
-//            val fragment: Fragment = ProfileEditFragment()
-//            requireActivity().supportFragmentManager.beginTransaction()
-//                .add(fragment, "editP")
-//                .addToBackStack(null)
-//                .replace(R.id.container, fragment)
-//                .commit()
-        }
+//        binding.ubahProfile!!.setOnClickListener {
+//            findNavController().navigate(R.id.action_navigation_setting_to_profileEditFragment)
+////            val fragment: Fragment = ProfileEditFragment()
+////            requireActivity().supportFragmentManager.beginTransaction()
+////                .add(fragment, "editP")
+////                .addToBackStack(null)
+////                .replace(R.id.container, fragment)
+////                .commit()
+//        }
     }
 
-    private fun updateUI(user: FirebaseUser?) {
-        binding.logout?.text = if (user == null)
-            getString(R.string.login)
-        else
-            getString(R.string.logout)
+    private fun updateUI(user: FirebaseUser?) = with(binding) {
+        if (user == null) {
+            namaProfile.visibility = View.GONE
+            imageProfile.visibility = View.GONE
+            logout.text = getString(R.string.login)
+        }
+        else {
+            namaProfile.text = user.displayName
+            Glide.with(this@SettingFragment).load(user.photoUrl).into(imageProfile)
+            namaProfile.visibility = View.VISIBLE
+            imageProfile.visibility = View.VISIBLE
+            logout.text = getString(R.string.logout)
+        }
     }
 }
