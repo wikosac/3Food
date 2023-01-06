@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/sekitar"
+                android:text=""
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,7 @@
                 android:id="@+id/recyclerView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -99,16 +99,27 @@
                 app:layout_constraintStart_toStartOf="@+id/textView3"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-            <androidx.recyclerview.widget.RecyclerView
+
+            <ImageView
                 android:id="@+id/horizontalRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="169dp"
-                android:layout_margin="16dp"
+                android:layout_height="200dp"
                 android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintStart_toStartOf="@+id/textView4"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                tools:listitem="@layout/place_list" />
+                android:src="@drawable/poster3"
+                app:layout_constraintStart_toStartOf="@id/textView4"
+                app:layout_constraintTop_toBottomOf="@id/textView4"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/horizontalRecyclerView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="169dp"-->
+<!--                android:layout_margin="16dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/textView4"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView4"-->
+<!--                tools:listitem="@layout/place_list" />-->
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

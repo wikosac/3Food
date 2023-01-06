@@ -37,12 +37,13 @@
             android:orientation="vertical"
             android:layout_marginTop="16dp">
 
+
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="252dp"
+                android:layout_height="254dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
-                android:src="@drawable/eating"/>
+                android:src="@drawable/eating" />
 
             <TextView
                 android:id="@+id/ubahProfile"
@@ -50,195 +51,197 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="AlluringJk"
+                android:textSize="30dp"
                 android:textStyle="bold"/>
 
-            <LinearLayout
-                android:background="@drawable/round_back_white"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:orientation="vertical"
-                android:padding="15dp">
+            <!--            <LinearLayout-->
+            <!--                android:background="@drawable/round_back_white"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="20dp"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:padding="15dp">-->
 
-                <!-- Dark Mode -->
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+            <!--                &lt;!&ndash; Dark Mode &ndash;&gt;-->
+            <!--                <RelativeLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content">-->
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:id="@+id/nightModeIcon"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_baseline_nights_icon"
-                        android:background="@drawable/round_back_night_mode"
-                        android:padding="12dp"/>
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="40dp"-->
+            <!--                        android:id="@+id/nightModeIcon"-->
+            <!--                        android:layout_height="40dp"-->
+            <!--                        android:src="@drawable/ic_baseline_nights_icon"-->
+            <!--                        android:background="@drawable/round_back_night_mode"-->
+            <!--                        android:padding="12dp"/>-->
 
-                    <TextView
-                        android:layout_marginStart="15dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="Mode Malam"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/nightModeIcon"/>
+            <!--                    <TextView-->
+            <!--                        android:layout_marginStart="15dp"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_centerVertical="true"-->
+            <!--                        android:text="Mode Malam"-->
+            <!--                        android:textStyle="bold"-->
+            <!--                        android:layout_toEndOf="@+id/nightModeIcon"/>-->
 
-                    <androidx.appcompat.widget.SwitchCompat
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:switchMinWidth="50dp"
-                        android:theme="@style/nightModeSwitch"/>
-                </RelativeLayout>
+            <!--                    <androidx.appcompat.widget.SwitchCompat-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_alignParentEnd="true"-->
+            <!--                        android:layout_centerVertical="true"-->
+            <!--                        android:switchMinWidth="50dp"-->
+            <!--                        android:theme="@style/nightModeSwitch"/>-->
+            <!--                </RelativeLayout>-->
 
-                <!-- Notification -->
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+            <!--                &lt;!&ndash; Notification &ndash;&gt;-->
+            <!--                <RelativeLayout-->
+            <!--                    android:layout_marginTop="10dp"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content">-->
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:id="@+id/notificationIcon"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_baseline_notifications_24"
-                        android:background="@drawable/round_back_notification"
-                        android:padding="12dp"/>
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="40dp"-->
+            <!--                        android:id="@+id/notificationIcon"-->
+            <!--                        android:layout_height="40dp"-->
+            <!--                        android:src="@drawable/ic_baseline_notifications_24"-->
+            <!--                        android:background="@drawable/round_back_notification"-->
+            <!--                        android:padding="12dp"/>-->
 
-                    <TextView
-                        android:layout_marginStart="15dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="Notifikasi"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/notificationIcon"/>
+            <!--                    <TextView-->
+            <!--                        android:layout_marginStart="15dp"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_centerVertical="true"-->
+            <!--                        android:text="Notifikasi"-->
+            <!--                        android:textStyle="bold"-->
+            <!--                        android:layout_toEndOf="@+id/notificationIcon"/>-->
 
-                    <androidx.appcompat.widget.SwitchCompat
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:switchMinWidth="50dp"
-                        android:theme="@style/notificationSwitch"/>
-                </RelativeLayout>
+            <!--                    <androidx.appcompat.widget.SwitchCompat-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_alignParentEnd="true"-->
+            <!--                        android:layout_centerVertical="true"-->
+            <!--                        android:switchMinWidth="50dp"-->
+            <!--                        android:theme="@style/notificationSwitch"/>-->
+            <!--                </RelativeLayout>-->
 
-                <!-- Private -->
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+            <!--                &lt;!&ndash; Private &ndash;&gt;-->
+            <!--                <RelativeLayout-->
+            <!--                    android:layout_marginTop="10dp"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content">-->
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:id="@+id/privateAcountIcon"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_baseline_privacy_tip_24"
-                        android:background="@drawable/round_back_private_ccount"
-                        android:padding="12dp"/>
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="40dp"-->
+            <!--                        android:id="@+id/privateAcountIcon"-->
+            <!--                        android:layout_height="40dp"-->
+            <!--                        android:src="@drawable/ic_baseline_privacy_tip_24"-->
+            <!--                        android:background="@drawable/round_back_private_ccount"-->
+            <!--                        android:padding="12dp"/>-->
 
-                    <TextView
-                        android:layout_marginStart="15dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="Akun Privat"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/privateAcountIcon"/>
+            <!--                    <TextView-->
+            <!--                        android:layout_marginStart="15dp"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_centerVertical="true"-->
+            <!--                        android:text="Akun Privat"-->
+            <!--                        android:textStyle="bold"-->
+            <!--                        android:layout_toEndOf="@+id/privateAcountIcon"/>-->
 
-                    <androidx.appcompat.widget.SwitchCompat
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:switchMinWidth="50dp"
-                        android:theme="@style/privateAccountSwitch"/>
-                </RelativeLayout>
-            </LinearLayout>
+            <!--                    <androidx.appcompat.widget.SwitchCompat-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_alignParentEnd="true"-->
+            <!--                        android:layout_centerVertical="true"-->
+            <!--                        android:switchMinWidth="50dp"-->
+            <!--                        android:theme="@style/privateAccountSwitch"/>-->
+            <!--                </RelativeLayout>-->
+            <!--            </LinearLayout>-->
 
             <LinearLayout
                 android:background="@drawable/round_back_white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
                 android:orientation="vertical"
                 android:padding="15dp">
 
-                <!-- Security -->
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <!--                &lt;!&ndash; Security &ndash;&gt;-->
+                <!--                <RelativeLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content">-->
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:id="@+id/securityIcon"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_baseline_lock_24"
-                        android:background="@drawable/round_back_security"
-                        android:padding="12dp"/>
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="40dp"-->
+                <!--                        android:id="@+id/securityIcon"-->
+                <!--                        android:layout_height="40dp"-->
+                <!--                        android:src="@drawable/ic_baseline_people_24"-->
+                <!--                        android:background="@drawable/round_back_security"-->
+                <!--                        android:padding="12dp"/>-->
 
-                    <TextView
-                        android:layout_marginStart="15dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="Security &amp; Privacy"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/securityIcon"/>
-                </RelativeLayout>
+                <!--                    <TextView-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:text="About Us"-->
+                <!--                        android:textStyle="bold"-->
+                <!--                        android:layout_toEndOf="@+id/securityIcon"/>-->
+                <!--                </RelativeLayout>-->
 
-                <!-- text -->
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <!--                &lt;!&ndash; text &ndash;&gt;-->
+                <!--                <RelativeLayout-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content">-->
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:id="@+id/textIcon"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_baseline_text_fields_24"
-                        android:background="@drawable/round_back_notification"
-                        android:padding="12dp"/>
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="40dp"-->
+                <!--                        android:id="@+id/textIcon"-->
+                <!--                        android:layout_height="40dp"-->
+                <!--                        android:src="@drawable/ic_baseline_text_fields_24"-->
+                <!--                        android:background="@drawable/round_back_notification"-->
+                <!--                        android:padding="12dp"/>-->
 
-                    <TextView
-                        android:layout_marginStart="15dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="Ukuran Text"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/textIcon"/>
-                </RelativeLayout>
+                <!--                    <TextView-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:text="Versi Aplikasi"-->
+                <!--                        android:textStyle="bold"-->
+                <!--                        android:layout_toEndOf="@+id/textIcon"/>-->
+                <!--                </RelativeLayout>-->
 
-                <!-- Langue -->
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <!--                &lt;!&ndash; Langue &ndash;&gt;-->
+                <!--                <RelativeLayout-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content">-->
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:id="@+id/languagesIcon"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_baseline_language_24"
-                        android:background="@drawable/round_back_night_mode"
-                        android:padding="12dp"/>
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="40dp"-->
+                <!--                        android:id="@+id/languagesIcon"-->
+                <!--                        android:layout_height="40dp"-->
+                <!--                        android:src="@drawable/ic_baseline_language_24"-->
+                <!--                        android:background="@drawable/round_back_night_mode"-->
+                <!--                        android:padding="12dp"/>-->
 
-                    <TextView
-                        android:layout_marginStart="15dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="Bahasa"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@+id/languagesIcon"/>
-                </RelativeLayout>
+                <!--                    <TextView-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:text="Bahasa"-->
+                <!--                        android:textStyle="bold"-->
+                <!--                        android:layout_toEndOf="@+id/languagesIcon"/>-->
+                <!--                </RelativeLayout>-->
 
                 <!-- Langue -->
                 <RelativeLayout
                     android:id="@+id/logoutView"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 

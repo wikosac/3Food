@@ -72,7 +72,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/searchView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:imeOptions="actionSearch"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -84,7 +84,6 @@
         android:layout_marginTop="150dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="@+id/searchViewLayout"
         app:layout_constraintTop_toBottomOf="@+id/searchViewLayout">
 
         <TextView

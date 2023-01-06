@@ -101,7 +101,7 @@ class DashboardFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         //image from storage
-        binding.horizontalRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+//        binding.horizontalRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         listImages = arrayListOf()
 
         databaseReference = FirebaseDatabase.getInstance().getReference("food")
@@ -112,7 +112,7 @@ class DashboardFragment : Fragment() {
                         val list = dataSnapshot.getValue(ImageData::class.java)
                         listImages.add(list!!)
                     }
-                    binding.horizontalRecyclerView.adapter = ImageAdapter(requireContext(), listImages)
+//                    binding.horizontalRecyclerView.adapter = ImageAdapter(requireContext(), listImages)
                 }
             }
 
