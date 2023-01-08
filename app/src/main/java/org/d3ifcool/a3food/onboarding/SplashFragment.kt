@@ -19,13 +19,13 @@ class SplashFragment : Fragment() {
     ): View? {
 
         Handler(Looper.getMainLooper()).postDelayed({
-//            findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
+            findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
 
-            if (onBoardingFinished()) {
-                findNavController().navigate(R.id.action_splashFragment_to_loginActivity)
-            } else {
-                findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
-            }
+//            if (onBoardingFinished()) {
+//                findNavController().navigate(R.id.action_splashFragment_to_loginActivity)
+//            } else {
+//                findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
+//            }
         }, 3000)
 
         // Inflate the layout for this fragment
