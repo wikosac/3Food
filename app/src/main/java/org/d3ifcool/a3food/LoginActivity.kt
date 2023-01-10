@@ -32,6 +32,15 @@ class LoginActivity : AppCompatActivity() {
         authState.observe(this, { updateUI(it) })
     }
 
+    @Deprecated("Deprecated in Java")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        @Suppress("DEPRECATION")
+        super.onActivityResult(requestCode, resultCode, data)
+        val intentZ = Intent(this, MainActivity::class.java)
+        startActivity(intentZ)
+        finish()
+    }
+
     private fun mulaiLogin() {
         if (binding.loginButton.text == getString(R.string.logout)) {
             AuthUI.getInstance().signOut(this)
@@ -43,9 +52,6 @@ class LoginActivity : AppCompatActivity() {
             .setAvailableProviders(providers)
             .build()
         signInLauncher.launch(intent)
-//        val intentZ = Intent(this, MainActivity::class.java)
-//        startActivity(intentZ)
-//        finish()
     }
 
     private fun lewati() {

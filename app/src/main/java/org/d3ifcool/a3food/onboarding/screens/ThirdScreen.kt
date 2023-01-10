@@ -28,7 +28,7 @@ class ThirdScreen : Fragment() {
             onBoardingFinished()
 //            val intent = Intent(activity, LoginActivity::class.java)
 //            startActivity(intent)
-//            activity?.finish()
+            requireActivity().finish()
         }
 
         return binding.root

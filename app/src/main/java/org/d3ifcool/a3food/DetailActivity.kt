@@ -3,6 +3,7 @@ package org.d3ifcool.a3food
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.findNavController
 import com.bumptech.glide.Glide
 import org.d3ifcool.a3food.databinding.ActivityDetailBinding
 import org.d3ifcool.a3food.network.PlaceApi
@@ -18,8 +19,7 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.back.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
 
         val bundle = intent.extras

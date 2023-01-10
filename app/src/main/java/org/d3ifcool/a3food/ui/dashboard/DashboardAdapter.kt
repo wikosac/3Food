@@ -68,6 +68,7 @@ class DashboardAdapter(private val handler: ClickHandler) :
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun toggleSelection(pos: Int) {
         val id = getItem(pos).id
         if (selectionIds.contains(id))

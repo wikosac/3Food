@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "742110860716-7u3q293rd698ibqtf5j8j5i1idn3080f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.d3ifcool.a3food",
+            "certificate_hash": "110d0a015c1d7cdac55ae954cdd752d13f2a56fa"
+          }
+        },
+        {
+          "client_id": "742110860716-gn7m3s6um0s7rarbebergnuidr0t03lh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.d3ifcool.a3food",
+            "certificate_hash": "2a0f73bb5f91268fc2bd885ba08f32ea43d3dc6b"
+          }
+        },
+        {
           "client_id": "742110860716-ph19veoem69qjv0q5oo6ucu2c52tgmmc.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
